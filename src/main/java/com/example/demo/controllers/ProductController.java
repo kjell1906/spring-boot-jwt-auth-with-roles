@@ -29,6 +29,12 @@ public class ProductController {
 
     }
 
+    @PostMapping("/new")
+
+    public void createProduct(@RequestBody Product product){
+        productService.save(product);
+    }
+
     @PutMapping("update")
     public void updateProduct(@RequestBody Product product) {
         Product p = product;
